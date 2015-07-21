@@ -19,6 +19,8 @@ class Q < Formula
   depends_on "autoconf" => :build
   depends_on "rust" => :build
 
+  conflicts_with "q", :because => "https://github.com/harelba/q also ships a q binary"
+
   def install
     system "cargo", "build", "--release"
     bin.install "target", "release", "q"
