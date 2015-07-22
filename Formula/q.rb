@@ -17,7 +17,7 @@ class Q < Formula
 
   depends_on "pcre" => :build
   depends_on "autoconf" => :build
-  # depends_on "rust" => :build
+  depends_on "rust" => :build
 
   conflicts_with "q", :because => "https://github.com/harelba/q also ships a q binary"
 
