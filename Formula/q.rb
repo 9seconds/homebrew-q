@@ -4,7 +4,7 @@
 
 class Q < Formula
   homepage "https://github.com/9seconds/q"
-  # url "https://github.com/9seconds/guide-dog.git", using: :git, :tag => "0.1"
+  url "https://github.com/9seconds/q.git", using: :git, :tag => "0.1"
   sha1 ""
 
   head "https://github.com/9seconds/q.git", using: :git
@@ -17,13 +17,13 @@ class Q < Formula
 
   depends_on "pcre" => :build
   depends_on "autoconf" => :build
-  depends_on "rust" => :build
+  # depends_on "rust" => :build
 
   conflicts_with "q", :because => "https://github.com/harelba/q also ships a q binary"
 
   def install
     system "cargo", "build", "--release"
-    bin.install "target", "release", "q"
+    bin.install "target/release/q"
   end
 
   test do
