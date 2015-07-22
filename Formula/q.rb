@@ -24,6 +24,7 @@ class Q < Formula
   def install
     system "cargo", "build", "--release"
     bin.install "target/release/q"
+    man1.install "man/q.1"
   end
 
   test do
