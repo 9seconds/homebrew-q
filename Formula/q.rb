@@ -4,7 +4,7 @@
 
 class Q < Formula
   homepage "https://github.com/9seconds/q"
-  url "https://github.com/9seconds/q.git", using: :git, :tag => "0.1.0"
+  url "https://github.com/9seconds/q.git", using: :git, :tag => "0.1.1"
   sha1 ""
 
   head "https://github.com/9seconds/q.git", using: :git
